@@ -17,5 +17,8 @@ import lombok.ToString;
 public class Response {
     private String code;
     private String result;
+    private String lng;
+    private String lat;
+
 
 }

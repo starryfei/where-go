@@ -9,9 +9,9 @@ package com.starry.wherego.common;
  **/
 public class MapCommon {
     public final static String MAP_AK = "6q11hNHkI0Ar8Um6Wtrn1GaICwz8tGw0";
-
+    // 移除回调函数
     public final static String ADDRESS_URL = "http://api.map.baidu.com/geocoder/v2/?address={address}&output=json" +
-            "&ak={ak}&callback=showLocation";
+            "&ak={ak}";
 
     public final static String IP_URL = "http://api.map.baidu.com/location/ip?ip={ip}&ak={ak}&coor=bd09ll";
 
