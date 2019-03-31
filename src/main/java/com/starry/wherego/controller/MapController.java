@@ -1,7 +1,6 @@
 package com.starry.wherego.controller;
 
 import com.starry.wherego.bean.Response;
-import com.starry.wherego.exception.MapException;
 import com.starry.wherego.service.impl.LocationServiceImpl;
 import io.swagger.annotations.*;
 import org.slf4j.Logger;
@@ -20,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @Api("百度地图API接口")
 @RestController()
-public class MapController {
+public class MapController extends BaseController{
     private static Logger LOGGER = LoggerFactory.getLogger(MapController.class);
     @Autowired
     private LocationServiceImpl locationService;
@@ -47,8 +46,7 @@ public class MapController {
     })
 
     @GetMapping("/suggestion")
-    public Response suggestAddress(@RequestParam("query") String query,@RequestParam("city") String city)
-            throws MapException {
+    public Response suggestAddress(@RequestParam("query") String query,@RequestParam("city") String city) {
         return locationService.proprtAddress(query,city);
     }
 

@@ -2,20 +2,22 @@ package com.starry.wherego.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
 import com.starry.wherego.bean.Response;
+import com.starry.wherego.bean.dto.Location;
 import com.starry.wherego.common.MapCommon;
-import com.starry.wherego.exception.MapException;
+import com.starry.wherego.dao.LocationDao;
 import com.starry.wherego.service.BaseService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -33,12 +35,15 @@ public class LocationServiceImpl implements BaseService {
     private RedisTemplate redisTemplate;
     @Autowired
     private RestTemplate restTemplate;
+    @Autowired
+    private LocationDao locationDao;
     static {
 
     }
+    @Transactional()
     public Response getLocationByIp(String ip) {
 //        redisTemplate.getExpire()
-        LOGGER.info(redisTemplate.opsForValue().get("hhh").toString());
+//        LOGGER.info(redisTemplate.opsForValue().get("hhh").toString());
         redisTemplate.opsForValue().set("ip", ip, 10, TimeUnit.SECONDS);
         String value = (String) redisTemplate.opsForValue().get("ip");
         LOGGER.info(value);
@@ -65,6 +70,11 @@ public class LocationServiceImpl implements BaseService {
             result.setLng(point.get("x").toString());
             result.setLat(point.get("y").toString());
             result.setResult("success");
+            Location location = new Location();
+            location.setUserId(UUID.randomUUID().toString());
+            location.setLat(result.getLat());
+            location.setLng(result.getLng());
+            locationDao.save(location);
             LOGGER.info(result.toString());
 
         } else {
@@ -86,7 +96,7 @@ public class LocationServiceImpl implements BaseService {
 
     }
 
-    public Response proprtAddress(String proAdderss,String city) throws MapException {
+    public Response proprtAddress(String proAdderss,String city) {
         Map<String,String> parameters = new HashMap<>(4);
         parameters.put("ak",MapCommon.MAP_AK);
         parameters.put("region",city);
@@ -96,15 +106,6 @@ public class LocationServiceImpl implements BaseService {
         response = restTemplate.getForEntity(MapCommon.POPMT_ABROAD,String.class,parameters);
 
         return requestBaidu(result,response);
-//        try {
-//            if (requestBaidu(result, response)){
-//                return result;
-//            }
-//        }catch (Exception e) {
-//            result.setCode("400");
-//            throw new MapException("Connection time out");
-//        }
-//        return  result;
     }
 
 
@@ -122,7 +123,6 @@ public class LocationServiceImpl implements BaseService {
         } else {
             result.setCode("400");
             result.setResult("failure");
-//            return result;
         }
         return result;
     }

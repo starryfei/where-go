@@ -1,6 +1,5 @@
 package com.starry.wherego.service.impl;
 
-import com.starry.wherego.exception.MapException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,18 +16,18 @@ public class LocationServiceImplTest {
     @Autowired
     private LocationServiceImpl locationService;
     @Test
-    public void getLocation() throws MapException {
+    public void getLocation() {
         String ip = "114.242.248.37";
         locationService.getLocationByIp(ip);
     }
     @Test
-    public void searchAddress() throws MapException {
+    public void searchAddress()  {
         String address = "北京";
         locationService.searchLocation(address);
     }
 
     @Test
-    public void proprtAddress() throws MapException {
+    public void proprtAddress() {
         String query = "天安门";
         String city = "北京";
         locationService.proprtAddress(query,city);
