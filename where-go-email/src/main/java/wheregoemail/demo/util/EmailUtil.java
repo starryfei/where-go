@@ -20,7 +20,7 @@ public class EmailUtil {
         Email email = new SimpleEmail();
         email.setHostName("smtp.163.com");
         email.setSmtpPort(465);
-        email.setAuthenticator(new DefaultAuthenticator("15611872648@163.com", "19930421fei"));
+        email.setAuthenticator(new DefaultAuthenticator("15611872648@163.com", ""));
         email.setSSLOnConnect(true);
         email.setFrom("15611872648@163.com", "feiiiii");
         email.setSubject("验证码");
