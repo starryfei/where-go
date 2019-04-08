@@ -6,6 +6,8 @@
         <option value="$PROJECT_DIR$/../where-go/pom.xml" />
         <option value="$PROJECT_DIR$/../where-go-email/pom.xml" />
         <option value="$PROJECT_DIR$/where-go-api/pom.xml" />
+        <option value="$PROJECT_DIR$/where-go/pom.xml" />
+        <option value="$PROJECT_DIR$/where-go-email/pom.xml" />
       </list>
     </option>
   </component>
