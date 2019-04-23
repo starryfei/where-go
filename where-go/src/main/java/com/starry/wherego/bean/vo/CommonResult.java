@@ -29,8 +29,11 @@ public class CommonResult {
      *
      * @param data 获取的数据
      */
-    public static CommonResult result(Object data) {
+    public static CommonResult success(Object data) {
         return result(SUCCESS,"success", data);
+    }
+    public static CommonResult success() {
+        return result(SUCCESS,"success",null);
     }
 
     /**
@@ -46,22 +49,6 @@ public class CommonResult {
         result.setData(data);
         return result;
     }
-//    /**
-//     * 返回分页成功数据
-//     */
-//    public CommonResult pageSuccess(List data) {
-//        PageInfo pageInfo = new PageInfo(data);
-//        Map<String, Object> result = new HashMap<>();
-//        result.put("pageSize", pageInfo.getPageSize());
-//        result.put("totalPage", pageInfo.getPages());
-//        result.put("total", pageInfo.getTotal());
-//        result.put("pageNum", pageInfo.getPageNum());
-//        result.put("list", pageInfo.getList());
-//        this.code = SUCCESS;
-//        this.message = "操作成功";
-//        this.data = result;
-//        return this;
-//    }
 
     /**
      * 普通失败提示信息
@@ -88,11 +75,11 @@ public class CommonResult {
      *
      * @param message 错误信息
      */
-    public CommonResult unauthorized(String message) {
-        this.code = UNAUTHORIZED;
-        this.message = "暂未登录或token已经过期";
-        this.data = message;
-        return this;
+    public static CommonResult unauthorized(String message) {
+        CommonResult result = new CommonResult();
+        result.setCode(UNAUTHORIZED);
+        result.setMessage(message);
+        return result;
     }
 
     /**
@@ -116,10 +103,7 @@ public class CommonResult {
         return this;
     }
 
-//    @Override
-//    public String toString() {
-//        return JsonUtil.objectToJson(this);
-//    }
+
 
     public int getCode() {
         return code;

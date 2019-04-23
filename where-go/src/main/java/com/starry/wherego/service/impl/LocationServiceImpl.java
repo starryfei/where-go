@@ -9,6 +9,7 @@ import com.starry.wherego.service.BaseService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.NamedThreadLocal;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
@@ -47,8 +48,8 @@ public class LocationServiceImpl implements BaseService {
         redisTemplate.opsForValue().set("ip", ip, 10, TimeUnit.SECONDS);
         String value = (String) redisTemplate.opsForValue().get("ip");
         LOGGER.info(value);
-        Long time = redisTemplate.getExpire("ip");
-        LOGGER.info("time:  "+time+"");
+//        Long time = redisTemplate.getExpire("ip");
+//        LOGGER.info("time:  "+time+"");
 
         Map<String,String> parameters = new HashMap<>(2);
         parameters.put("ip",ip);

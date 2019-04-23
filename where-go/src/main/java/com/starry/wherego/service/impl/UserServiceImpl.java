@@ -60,9 +60,9 @@ public class UserServiceImpl implements BaseService {
     }
 
     public UserVo register(User user) {
-        boolean check = checkRegister(user);
+        User check = getUserByName(user.getUserName());
         UserVo vo = new UserVo();
-        if(check) {
+        if(check == null) {
             User reg = userDao.save(user);
             LOGGER.info(reg.toString());
             vo.setCode("200");
@@ -76,12 +76,10 @@ public class UserServiceImpl implements BaseService {
 
         return vo;
     }
-    private boolean checkRegister(User user) {
-        User u = userDao.findUserByUserName(user.getUserName());
-        if (u != null) {
-            return false;
-        }
-        return true;
+    public User getUserByName(String name) {
+        User user = userDao.findUserByUserName(name);
+
+        return user;
     }
 
     public String getCode(String emailAddress) throws EmailException {
