@@ -37,6 +37,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-core:5.1.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.1.4.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.yaml:snakeyaml:1.23" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.cloud:spring-cloud-netflix-eureka-client:2.2.0.M3" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.1.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-json:2.1.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.8" level="project" />

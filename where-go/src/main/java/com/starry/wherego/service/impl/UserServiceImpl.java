@@ -35,29 +35,29 @@ public class UserServiceImpl implements BaseService {
     @Autowired
     private RocketMQTemplate rocketMQTemplate;
 
-    public UserVo login(String name,String pwd){
-//        boolean md5 = MD5Util.checkMD5()
-        UserVo vo = new UserVo();
-        vo.setCode("200");
-        vo.setResult("true");
-        String cookie = stringRedisTemplate.opsForValue().get(name+pwd);
-        LOGGER.info(cookie);
-        if(cookie == null) {
-            User user = userDao.findUserByUserNameAndPwd(name, pwd);
-
-            if (user != null) {
-                LOGGER.info(user.toString());
-                vo.setUserImage(user.getUserName());
-                stringRedisTemplate.opsForValue().set(name + pwd.toString(), user.getUserId(), 10, TimeUnit.SECONDS);
-                return vo;
-            }
-            vo.setCode("222");
-            vo.setResult("false");
-
-            return vo;
-        }
-        return vo;
-    }
+//    public UserVo login(String name,String pwd){
+////        boolean md5 = MD5Util.checkMD5()
+//        UserVo vo = new UserVo();
+//        vo.setCode("200");
+//        vo.setResult("true");
+//        String cookie = stringRedisTemplate.opsForValue().get(name+pwd);
+//        LOGGER.info(cookie);
+//        if(cookie == null) {
+//            User user = userDao.findUserByUserNameAndPwd(name, pwd);
+//
+//            if (user != null) {
+//                LOGGER.info(user.toString());
+//                vo.setUserImage(user.getUserName());
+//                stringRedisTemplate.opsForValue().set(name + pwd.toString(), user.getUserId(), 10, TimeUnit.SECONDS);
+//                return vo;
+//            }
+//            vo.setCode("222");
+//            vo.setResult("false");
+//
+//            return vo;
+//        }
+//        return vo;
+//    }
 
     public UserVo register(User user) {
         User check = getUserByName(user.getUserName());

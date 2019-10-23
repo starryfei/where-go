@@ -1,6 +1,7 @@
 package com.starry.wherego.config;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
@@ -20,6 +21,19 @@ public class WebConfig extends WebMvcConfigurationSupport {
         registry.addInterceptor(new TimeHandlerInterceptor()).addPathPatterns("/*/**");
 
 
+    }
+
+    /**
+     * Override this method to configure cross origin requests processing.
+     *
+     * @param registry
+     * @see CorsRegistry
+     * @since 4.2
+     */
+    @Override
+    protected void addCorsMappings(CorsRegistry registry) {
+        // 跨域
+        registry.addMapping("/**");
     }
 
     /**
