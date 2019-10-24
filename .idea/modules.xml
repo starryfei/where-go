@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/where-go/where-go.iml" filepath="$PROJECT_DIR$/where-go/where-go.iml" />
       <module fileurl="file://$PROJECT_DIR$/where-go-api/where-go-api.iml" filepath="$PROJECT_DIR$/where-go-api/where-go-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/where-go-email/where-go-email.iml" filepath="$PROJECT_DIR$/where-go-email/where-go-email.iml" />
+      <module fileurl="file://$PROJECT_DIR$/where-go-map/where-go-map.iml" filepath="$PROJECT_DIR$/where-go-map/where-go-map.iml" />
       <module fileurl="file://$PROJECT_DIR$/where-go-order/where-go-order.iml" filepath="$PROJECT_DIR$/where-go-order/where-go-order.iml" />
       <module fileurl="file://$PROJECT_DIR$/where-go-server/where-go-server.iml" filepath="$PROJECT_DIR$/where-go-server/where-go-server.iml" />
     </modules>

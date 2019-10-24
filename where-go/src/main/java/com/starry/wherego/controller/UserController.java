@@ -32,7 +32,7 @@ import java.util.UUID;
  * @date: 2019-03-28 22:36
  **/
 @RestController()
-@RequestMapping("/common")
+@RequestMapping("/com.starry.wheregomap.common")
 public class UserController {
     private Logger LOGGER = LoggerFactory.getLogger(UserController.class);
     @Autowired
