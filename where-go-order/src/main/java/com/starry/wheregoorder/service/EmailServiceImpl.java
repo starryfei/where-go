@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  **/
 @Component
 public class EmailServiceImpl implements EmailService {
-    @Override
+
     public String sendOrder(String address, String content) {
         return "email server error";
     }

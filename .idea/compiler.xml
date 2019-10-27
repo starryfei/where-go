@@ -2,9 +2,6 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="true">
-        <outputRelativeToContentRoot value="true" />
-      </profile>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -17,19 +14,11 @@
         <module name="where-go-server" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="com.starry" target="1.5" />
-      <module name="where-go" target="1.8" />
-      <module name="where-go-api" target="1.5" />
-      <module name="where-go-email" target="1.8" />
-      <module name="where-go-map" target="1.8" />
-      <module name="where-go-order" target="1.8" />
-      <module name="where-go-server" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="where-go" options="-parameters" />
+      <module name="where-go-api" options="-parameters" />
       <module name="where-go-email" options="-parameters" />
       <module name="where-go-map" options="-parameters" />
       <module name="where-go-order" options="-parameters" />
