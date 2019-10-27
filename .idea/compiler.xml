@@ -8,10 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="where-go" />
         <module name="where-go-api" />
+        <module name="where-go-data" />
         <module name="where-go-email" />
         <module name="where-go-map" />
         <module name="where-go-order" />
+        <module name="where-go-search" />
         <module name="where-go-server" />
+        <module name="where-go-user" />
       </profile>
     </annotationProcessing>
   </component>
@@ -19,10 +22,13 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="where-go" options="-parameters" />
       <module name="where-go-api" options="-parameters" />
+      <module name="where-go-data" options="-parameters" />
       <module name="where-go-email" options="-parameters" />
       <module name="where-go-map" options="-parameters" />
       <module name="where-go-order" options="-parameters" />
+      <module name="where-go-search" options="-parameters" />
       <module name="where-go-server" options="-parameters" />
+      <module name="where-go-user" options="-parameters" />
     </option>
   </component>
 </project>
