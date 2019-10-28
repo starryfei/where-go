@@ -1,13 +1,7 @@
 package com.starry.wheregouser.mapper;
 
 import com.starry.wheregouser.bean.dto.User;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.ResultMap;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
-import org.springframework.stereotype.Component;
-
-import java.util.List;
+import org.apache.ibatis.annotations.*;
 
 /**
  * ClassName: UserMapper
@@ -27,9 +21,23 @@ public interface UserMapper {
             @Result(column = "user_icon",property = "icon")
 
     })
+    /**
+     * 查找用户by name
+     */
     User selectUserByName(String name);
 
-    @Select("select * from user where user_email =#{email}")
+    @Select("Select * from user where user_name=#{name} and user_pwd=#{pwd}")
     @ResultMap(value = "userMap")
-    User selectUserByEmail(String email);
+    User login(String name,String pwd);
+
+    @Select("select * from user where id =#{id}")
+    @ResultMap(value = "userMap")
+    User selectUserById(String id);
+
+    @Insert("insert into user(user_name,user_pwd,user_email,phone,user_icon) " +
+            "values(#{userName},#{pwd},#{email},#{phone},#{icon})")
+    @ResultMap(value = "userMap")
+
+    void saveUser(String userName,String pwd, String email, String phone, String icon);
+
 }

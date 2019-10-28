@@ -15,12 +15,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupp
  **/
 @Configuration
 public class WebConfig extends WebMvcConfigurationSupport {
-//    @Override
-//    protected void addInterceptors(InterceptorRegistry registry) {
-//        registry.addInterceptor(new TimeHandlerInterceptor()).addPathPatterns("/*/**");
-//
-//
-//    }
+    @Override
+    protected void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(new LoginInterceptor()).addPathPatterns("/*/**");
+
+
+    }
 
     /**
      * Override this method to configure cross origin requests processing.

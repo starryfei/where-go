@@ -2,25 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bfbbffc-be1d-435d-88f7-cf4c8b198ee1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/where-go-api/src/main/java/com/starry/common/exception/CommonError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/where-go-api/src/main/java/com/starry/common/exception/CommonException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/where-go-api/src/main/java/com/starry/common/exception/EnumCommonError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/where-go-api/src/main/java/com/starry/common/vo/CommonResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/bean/dto/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/bean/vo/UserVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/config/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/where-go-user/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/where-go-api/src/main/java/com/starry/annontion/NoLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/config/LoginInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/config/RedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/where-go-user/src/main/resources/html/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/springcloud.txt" beforeDir="false" afterPath="$PROJECT_DIR$/doc/springcloud.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/where-go-api/where-go-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/where-go-api/where-go-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/where-go-map/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/where-go-map/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/bean/vo/UserVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/bean/vo/UserVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/where-go-user/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/where-go-user/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/../map/untitled/node_modules/" />
     <ignored path="$PROJECT_DIR$/../map/where-go-font-1/node_modules/" />
@@ -59,28 +53,65 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="149">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#739#740#0" expanded="true" />
+                <element signature="e#772#773#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/where-go-user/src/main/resources/application.properties">
+        <entry file="file://$PROJECT_DIR$/where-go-user/src/main/resources/html/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="58" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="58" />
+            <state relative-caret-position="347">
+              <caret line="44" column="49" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1586#1587#0" expanded="true" />
+                <element signature="e#1630#1631#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/mapper/UserMapper.java">
+        <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/config/RedisConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="33" column="41" lean-forward="true" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+            <state relative-caret-position="270">
+              <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/config/WebConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-168">
+              <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/config/LoginInterceptor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,11 +119,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/where-go-user/src/test/java/com/starry/wheregouser/WhereGoUserApplicationTests.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            <state relative-caret-position="270">
+              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,49 +141,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/bean/vo/UserVo.java">
+        <entry file="file://$PROJECT_DIR$/where-go-api/src/main/java/com/starry/common/exception/CommonException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="20" column="23" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="23" />
+            <state relative-caret-position="-31">
+              <caret line="9" column="28" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.5.0/mybatis-3.5.0.jar!/org/apache/ibatis/annotations/Result.class">
+        <entry file="file://$PROJECT_DIR$/where-go-api/src/main/java/com/starry/common/exception/EnumCommonError.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="21" column="17" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/bean/dto/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/where-go-user/src/main/resources/mybatis/mybatis-config.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/where-go-user/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="388">
+              <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -159,7 +163,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="AnnotationType" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -182,8 +189,6 @@
         <option value="$PROJECT_DIR$/where-go-search/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/doc/springcloud.md" />
         <option value="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/bean/User.java" />
-        <option value="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/bean/vo/UserVo.java" />
-        <option value="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/config/WebConfig.java" />
         <option value="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/bean/vo/CommonResult.java" />
         <option value="$PROJECT_DIR$/where-go-api/src/main/java/com/starry/mq/common/CommonResult.java" />
         <option value="$PROJECT_DIR$/where-go-api/src/main/java/com/starry/common/vo/exception/CommonException.java" />
@@ -195,12 +200,23 @@
         <option value="$PROJECT_DIR$/build.sh" />
         <option value="$PROJECT_DIR$/where-go-user/src/main/resources/mybatis/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/where-go-user/pom.xml" />
         <option value="$PROJECT_DIR$/where-go-user/src/test/java/com/starry/wheregouser/WhereGoUserApplicationTests.java" />
-        <option value="$PROJECT_DIR$/where-go-user/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/bean/dto/User.java" />
         <option value="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/WhereGoUserApplication.java" />
+        <option value="$PROJECT_DIR$/where-go-api/src/main/java/com/starry/annontion/NoLogin.java" />
+        <option value="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/config/WebConfig.java" />
+        <option value="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/config/RedisConfig.java" />
+        <option value="$PROJECT_DIR$/where-go-user/pom.xml" />
+        <option value="$PROJECT_DIR$/where-go-map/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/where-go-user/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/bean/vo/UserVo.java" />
+        <option value="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/service/UserService.java" />
+        <option value="$PROJECT_DIR$/where-go-user/src/main/resources/html/login.html" />
+        <option value="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/config/LoginInterceptor.java" />
+        <option value="$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/controller/UserController.java" />
       </list>
     </option>
   </component>
@@ -231,6 +247,260 @@
               <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
               <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="starry" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="starry" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="starry" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="starry" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-map" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-map" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-map" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-map" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-map" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wheregomap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-map" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wheregomap" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-map" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wheregomap" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-map" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wheregouser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wheregouser" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wheregouser" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wheregouser" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wheregouser" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wheregouser" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wheregouser" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="wheregouser" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="where-go" type="b2602c69:ProjectViewProjectNode" />
+              <item name="where-go-end" type="462c0819:PsiDirectoryNode" />
+              <item name="where-go-user" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -239,13 +509,14 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572187355609" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1572276158389" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -256,11 +527,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.starry.wheregouser.config" />
       <recent name="com.starry.common.vo.exception" />
       <recent name="com.starry.mq.common" />
       <recent name="com.starry.wheregouser.exception" />
       <recent name="com.starry.wheregouser.bean.vo" />
-      <recent name="com.starry.wheregouser.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/where-go-user/src/main/resources/mybatis" />
@@ -279,7 +550,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.WhereGoUserApplicationTests.selectUserByName">
+  <component name="RunManager" selected="Spring Boot.WhereGoUserApplication">
     <configuration name="WhereGoUserApplicationTests.selectUserByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="where-go-user" />
       <extension name="coverage">
@@ -362,7 +633,7 @@
       <option name="presentableId" value="Default" />
       <updated>1572169351588</updated>
       <workItem from="1572169352875" duration="2966000" />
-      <workItem from="1572177838025" duration="7360000" />
+      <workItem from="1572177838025" duration="13440000" />
     </task>
     <servers />
   </component>
@@ -396,12 +667,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10326000" />
+    <option name="totallyTimeSpent" value="16406000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -409,10 +681,11 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Duplicate detector" weight="0.32939634" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2152231" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35170603" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39895013" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -439,60 +712,29 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/service/impl/UserServiceImpl.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/config/LoginInterceptor.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/where-go-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/where-go-map/src/main/java/com/starry/wheregomap/config/RedisConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/where-go-map/src/main/java/com/starry/wheregomap/service/LocationServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="47" column="52" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/where-go-order/src/main/java/com/starry/wheregoorder/controller/OrderController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/where-go-order/src/main/java/com/starry/wheregoorder/config/RestConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/where-go-order/src/main/java/com/starry/wheregoorder/service/EmailService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/where-go-order/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/where-go-order/src/main/java/com/starry/wheregoorder/service/EmailServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -532,13 +774,6 @@
             <element signature="e#429#430#0" expanded="true" />
             <element signature="e#501#502#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/where-go-map/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="4" selection-start-column="3" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -629,45 +864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/config/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="20" column="2" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/where-go-api/src/main/java/com/starry/common/exception/CommonError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/where-go-api/src/main/java/com/starry/common/exception/CommonException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="69" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="69" />
-          <folding>
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#808#809#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/where-go-api/src/main/java/com/starry/common/exception/EnumCommonError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/where-go-api/src/main/java/com/starry/common/vo/CommonResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="66" column="38" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -699,34 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/bean/vo/UserVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/where-go-user/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/where-go-user/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="58" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/bean/dto/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -737,6 +905,125 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-user/src/test/java/com/starry/wheregouser/WhereGoUserApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-client/1.9.13/eureka-client-1.9.13.jar!/com/netflix/discovery/InstanceInfoReplicator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-api/src/main/java/com/starry/annontion/NoLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-api/src/main/java/com/starry/common/vo/CommonResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-map/src/main/java/com/starry/wheregomap/config/RedisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-map/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-map/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-map/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="4" selection-start-column="3" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-user/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-map/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-user/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/bean/vo/UserVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-map/src/main/java/com/starry/wheregomap/service/LocationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-916">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-api/src/main/java/com/starry/common/exception/CommonError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-api/src/main/java/com/starry/common/exception/CommonException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/WhereGoUserApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -744,20 +1031,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/mapper/UserMapper.java">
+    <entry file="file://$PROJECT_DIR$/where-go-user/src/main/resources/html/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="33" column="41" lean-forward="true" selection-start-line="33" selection-start-column="41" selection-end-line="33" selection-end-column="41" />
+        <state relative-caret-position="347">
+          <caret line="44" column="49" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-api/src/main/java/com/starry/common/exception/EnumCommonError.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/where-go-user/src/test/java/com/starry/wheregouser/WhereGoUserApplicationTests.java">
+    <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/config/RedisConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+        <state relative-caret-position="270">
+          <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/config/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-168">
+          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/config/LoginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="40" column="24" lean-forward="true" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/where-go-user/src/main/java/com/starry/wheregouser/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1586#1587#0" expanded="true" />
+            <element signature="e#1630#1631#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

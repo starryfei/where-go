@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="../res/css/login.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+</head>
+<body>
+<form>
+    <input type="text" name="username" id="username">
+    <input type="password" name="password" id="password">
+</form>
+<input type="button" value="Login" onclick="login()">
+<input type="button" value="Test" onclick="test()">
+
+</body>
+<script type="text/javascript">
+    function login(){
+        $.ajax({
+            url: "http://localhost:8095/login",
+            dataType: "json",
+            data: {'name':$("#username").val(), 'pwd':$("#password").val()},
+            type:"POST",
+            success:function(res){
+                console.log(res);
+                if(res.data.code == 200){
+                    var authStr = res.data.token
+                    console.log(authStr)
+                    //把生成的token放在cookie中
+                    $.cookie("authStr", authStr);
+                    console.log($.cookie('authStr'))
+                }else alert(res.msg);
+            }
+        });
+    }
+    function test(){
+        $.ajax({
+            url: "http://localhost:8095/test",
+            dataType: "json",
+            type:"GET",
+            beforeSend: function(request) {
+                console.log($.cookie('authStr'))
+                //将cookie中的token信息放于请求头中
+                request.setRequestHeader("authStr", $.cookie('authStr'));
+            },
+            success:function(res){
+                console.log(res);
+            }
+        });
+    }
+</script>
+</html>

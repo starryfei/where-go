@@ -19,8 +19,9 @@ import lombok.ToString;
 public class UserVo {
     private String result;
     private String code;
+    private String token;
 
-    private  String userImage;
+//    private  String userImage;
 
 
 }
