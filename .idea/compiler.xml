@@ -10,6 +10,7 @@
         <module name="where-go-api" />
         <module name="where-go-data" />
         <module name="where-go-email" />
+        <module name="where-go-gateway" />
         <module name="where-go-map" />
         <module name="where-go-order" />
         <module name="where-go-search" />
@@ -24,6 +25,7 @@
       <module name="where-go-api" options="-parameters" />
       <module name="where-go-data" options="-parameters" />
       <module name="where-go-email" options="-parameters" />
+      <module name="where-go-gateway" options="-parameters" />
       <module name="where-go-map" options="-parameters" />
       <module name="where-go-order" options="-parameters" />
       <module name="where-go-search" options="-parameters" />

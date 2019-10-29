@@ -44,7 +44,6 @@ public class LoginInterceptor extends HandlerInterceptorAdapter {
         String authStr = request.getHeader("authStr");
         log.info(authStr);
         String[] res = authStr.split(":");
-        log.info(">>> "+userService.toString());
         boolean check = userService.checkLogin(res[0], authStr);
         if(check) {
             return true;

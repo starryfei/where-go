@@ -41,6 +41,9 @@ public class UserController {
 
     }
     @GetMapping("/test")
+    /**
+     * 登陆测试
+     */
     public CommonResult test(){
         return CommonResult.success();
     }

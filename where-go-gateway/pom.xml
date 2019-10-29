@@ -7,25 +7,22 @@
         <artifactId>where-go</artifactId>
         <version>0.0.1</version>
     </parent>
-
-
     <groupId>com.starry</groupId>
-    <artifactId>where-go-server</artifactId>
+    <artifactId>where-go-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>where-go-server</name>
+    <name>where-go-gateway</name>
     <description>Demo project for Spring Boot</description>
 
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+
     </dependencies>
-
-
 </project>
