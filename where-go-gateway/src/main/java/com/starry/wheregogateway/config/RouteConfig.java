@@ -5,6 +5,10 @@ import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.reactive.CorsWebFilter;
+import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
+import org.springframework.web.util.pattern.PathPatternParser;
 
 /**
  * ClassName: RouteConfig
@@ -18,13 +22,26 @@ import org.springframework.context.annotation.Configuration;
 public class RouteConfig {
 
     @Bean
-    public RouteLocator routeLocator(RouteLocatorBuilder builder){
-        //网关访问/user/list时，如果token验证通过，会转发到 http://localhost:8077/api/user/list
+    public RouteLocator routeLocator(RouteLocatorBuilder builder) {
+        //测试过滤校验
         return builder.routes().route(r ->
-                        r.path("*")
-                        .uri("http://localhost:8098/send")
-                        .id("authon").filter(new AuthorizeGatewayFilter()))
-        .build();
+                r.path("/test")
+                        .uri("http://localhost:8095")
+                        .filters(new AuthorizeGatewayFilter())
+                        .id("authon"))
+                .build();
     }
 
+    @Bean
+    public CorsWebFilter corsFilter() {
+        CorsConfiguration config = new CorsConfiguration();
+        config.addAllowedMethod("*");
+        config.addAllowedOrigin("*");
+        config.addAllowedHeader("*");
+
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource(new PathPatternParser());
+        source.registerCorsConfiguration("/**", config);
+
+        return new CorsWebFilter(source);
+    }
 }

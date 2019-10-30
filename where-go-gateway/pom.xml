@@ -7,12 +7,12 @@
         <artifactId>where-go</artifactId>
         <version>0.0.1</version>
     </parent>
+
     <groupId>com.starry</groupId>
     <artifactId>where-go-gateway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>where-go-gateway</name>
     <description>Demo project for Spring Boot</description>
-
 
     <dependencies>
         <dependency>
