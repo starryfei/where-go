@@ -13,6 +13,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
+import java.net.URI;
+import java.util.Objects;
+
+import static com.starry.wheregogateway.common.FilterPathCommon.*;
+
+
 /**
  * ClassName: GlobalAuthorizeFilter
  * Description: Global token校验
@@ -26,22 +32,23 @@ public class GlobalAuthorizeFilter implements GlobalFilter, Ordered {
     @Autowired
     StringRedisTemplate redisTemplate;
 
-    /**
-     * Process the Web request and (optionally) delegate to the next {@code WebFilter}
-     * through the given {@link GatewayFilterChain}.
-     *
-     * @param exchange the current server exchange
-     * @param chain    provides a way to delegate to the next filter
-     * @return {@code Mono<Void>} to indicate when request processing is complete
-     */
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        log.info("访问过滤器");
+        // 获取路由信息
+//        Route gatewayUrl = exchange.getRequiredAttribute(ServerWebExchangeUtils.GATEWAY_ROUTE_ATTR);
+        ServerHttpRequest originalRequest = exchange.getRequest();
+        URI originalRequestUrl = originalRequest.getURI();
+        String routePath = originalRequestUrl.getPath();
+        log.info(originalRequestUrl.getHost()+": "+originalRequestUrl.getPath());
+        // 不限制登陆和注册访问请求
+        if(Objects.equals(LOGIN,routePath) || Objects.equals(REGISTER,routePath)) {
+            return chain.filter(exchange);
+        }
         ServerHttpRequest request = exchange.getRequest();
         String authStr = request.getHeaders().getFirst("authStr");
         log.info(authStr);
         ServerHttpResponse response = exchange.getResponse();
-        if ( authStr == null || "undefined".equals(authStr) ) {
+        if (authStr == null || UNDIFINE.equals(authStr) ) {
             response.setStatusCode(HttpStatus.UNAUTHORIZED);
             log.info(response.getStatusCode().toString());
             return response.setComplete();
@@ -63,6 +70,6 @@ public class GlobalAuthorizeFilter implements GlobalFilter, Ordered {
 
     @Override
     public int getOrder() {
-        return Ordered.HIGHEST_PRECEDENCE;
+        return 0;
     }
 }

@@ -10,4 +10,5 @@
 - 是否与服务注册于发现组件进行结合，通过 serviceId 转发到具体的服务实例。默认为 false，
      设为 true 便开启通过服务中心的自动根据 serviceId 创建路由的功能。
      ```java spring.cloud.gateway.discovery.locator.enabled=true```
-     
+- spring boot 2.2.0 spring cloud Hoxton.M3 的版本有bug,不能获取注册中心其他的服务
+git:  https://github.com/spring-cloud/spring-cloud-gateway/issues/1346

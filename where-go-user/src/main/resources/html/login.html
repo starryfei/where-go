@@ -18,7 +18,7 @@
 <script type="text/javascript">
     function login(){
         $.ajax({
-            url: "http://localhost:8093/WHERE-GO-USER/login",
+            url: "http://localhost:8093/where-go-user/login",
             dataType: "json",
             data: {'name':$("#username").val(), 'pwd':$("#password").val()},
             type:"POST",
@@ -36,7 +36,7 @@
     }
     function test(){
         $.ajax({
-            url: "http://localhost:8095/test",
+            url: "http://localhost:8093/order-service/address",
             dataType: "json",
             type:"GET",
             beforeSend: function(request) {
