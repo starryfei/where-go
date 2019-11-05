@@ -37,9 +37,9 @@ public class FollowerRedisServiceImpl implements FollowerRedisService {
      * @param followerId
      */
     @Override
-    public void saveLiked2Redis(String userId, String followerId) {
+    public void saveFollow2Redis(String userId, String followerId) {
         String key = RedisKeyUtils.getLikedKey(userId,followerId);
-        redisTemplate.opsForHash().put(RedisKeyUtils.MAP_KEY_USER_LIKED,key, FollowerStatus.LIKE.getCode());
+        redisTemplate.opsForHash().put(RedisKeyUtils.MAP_KEY_USER_LIKED,key, FollowerStatus.LIKE.getCode().toString());
     }
 
     /**
@@ -49,9 +49,9 @@ public class FollowerRedisServiceImpl implements FollowerRedisService {
      * @param followerId
      */
     @Override
-    public void unlikeFromRedis(String userId, String followerId) {
+    public void unFollow2Redis(String userId, String followerId) {
         String key = RedisKeyUtils.getLikedKey(userId,followerId);
-        redisTemplate.opsForHash().put(RedisKeyUtils.MAP_KEY_USER_LIKED,key, FollowerStatus.UNLIKE.getCode());
+        redisTemplate.opsForHash().put(RedisKeyUtils.MAP_KEY_USER_LIKED,key, FollowerStatus.UNLIKE.getCode().toString());
     }
 
     /**
@@ -61,7 +61,7 @@ public class FollowerRedisServiceImpl implements FollowerRedisService {
      * @param followerId
      */
     @Override
-    public void deleteLikedFromRedis(String userId, String followerId) {
+    public void deleteFollower2Redis(String userId, String followerId) {
         String key = RedisKeyUtils.getLikedKey(userId,followerId);
         redisTemplate.opsForHash().delete(RedisKeyUtils.MAP_KEY_USER_LIKED,key);
     }
@@ -95,10 +95,10 @@ public class FollowerRedisServiceImpl implements FollowerRedisService {
      * @return
      */
     @Override
-    public List<FollowerVo> getLikedDataFromRedis() {
+    public List<Follower> getLikedDataFromRedis() {
        Cursor<Map.Entry<Object, Object>> res = redisTemplate.opsForHash().scan(RedisKeyUtils.MAP_KEY_USER_LIKED,
                ScanOptions.scanOptions().build());
-       List<FollowerVo> vos = new ArrayList<>();
+       List<Follower> vos = new ArrayList<>();
        res.forEachRemaining((entry) ->{
            String key = (String) entry.getKey();
            log.info(key, entry.getValue());
@@ -106,7 +106,7 @@ public class FollowerRedisServiceImpl implements FollowerRedisService {
            String userId = ids[0];
            String followerId = ids[1];
            String status = (String) entry.getValue();
-           FollowerVo vo = FollowerVo.builder()
+           Follower vo = Follower.builder()
                    .followerId(followerId).userId(userId)
                    .status(Integer.valueOf(status))
                    .build();

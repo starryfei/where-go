@@ -1,7 +1,7 @@
 package com.starry.wheregouser.service;
 
+import com.starry.wheregouser.bean.dto.Follower;
 import com.starry.wheregouser.bean.vo.FollowerVo;
-import com.starry.wheregouser.bean.vo.UserVo;
 
 import java.util.List;
 
@@ -14,21 +14,21 @@ import java.util.List;
  **/
 public interface FollowerRedisService {
     /**
-     * 点赞。状态为1
+     * 关注。状态为1
      * @param userId
      * @param followerId
      */
-    void saveLiked2Redis(String userId, String followerId);
+    void saveFollow2Redis(String userId, String followerId);
 
     /**
-     * 取消点赞。将状态改变为0
+     * 取消关注。将状态改变为0
      */
-    void unlikeFromRedis(String userId, String followerId);
+    void unFollow2Redis(String userId, String followerId);
 
     /**
-     * 从Redis中删除一条点赞数据
+     * 从Redis中删除一条关注数据
      */
-    void deleteLikedFromRedis(String userId, String followerId);
+    void deleteFollower2Redis(String userId, String followerId);
 
     /**
      * 该用户的点赞数加1
@@ -44,7 +44,7 @@ public interface FollowerRedisService {
      * 获取Redis中存储的所有点赞数据
      * @return
      */
-    List<FollowerVo> getLikedDataFromRedis();
+    List<Follower> getLikedDataFromRedis();
 
     /**
      * 获取Redis中存储的所有点赞数量

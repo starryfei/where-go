@@ -13,7 +13,7 @@ import java.util.List;
  * @date: 2019-11-04 22:30
  **/
 public interface IndexService {
-    List<TravelVo> index(int start, int end);
+    List<TravelVo> index(int pageIndex, int pageSize);
 
     List<TravelVo> allData();
 

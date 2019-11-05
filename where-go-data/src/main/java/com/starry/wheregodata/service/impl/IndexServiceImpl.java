@@ -1,5 +1,7 @@
 package com.starry.wheregodata.service.impl;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.starry.wheregodata.bean.dto.TravelContent;
 import com.starry.wheregodata.bean.vo.TravelVo;
 import com.starry.wheregodata.mapper.IndexMapper;
@@ -26,8 +28,10 @@ public class IndexServiceImpl implements IndexService {
     IndexMapper indexMapper;
 
     @Override
-    public List<TravelVo> index(int start, int end) {
-        List<TravelContent> results = indexMapper.index(start,end);
+    public List<TravelVo> index(int pageIndex, int pageSize) {
+        PageHelper.startPage(pageIndex, pageSize);
+        List<TravelContent> results = indexMapper.index();
+        log.info("total value: "+((Page)results).getTotal());
         return converToVo(results);
     }
 

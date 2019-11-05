@@ -19,8 +19,8 @@ public interface IndexMapper {
             @Result(column = "user_id", property = "userId"),
             @Result(column = "content_label", property = "label")
     })
-    @Select("select * from travel  where status=1 limit #{start}, #{end}")
-    List<TravelContent> index(int start, int end);
+    @Select("select * from travel  where status=1")
+    List<TravelContent> index();
 
     @Select("select * from travel where status=1")
     @ResultMap(value = "indexMapper")

@@ -20,7 +20,7 @@ public class IndexServiceTest {
     IndexService indexService;
     @Test
     public void index(){
-        indexService.index(0,3);
+        indexService.index(1,2).forEach(res ->log.info(res.toString()));
     }
 
 }

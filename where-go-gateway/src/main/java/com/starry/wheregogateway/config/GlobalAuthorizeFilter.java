@@ -1,5 +1,6 @@
 package com.starry.wheregogateway.config;
 
+import com.starry.context.UserApplicationContext;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
@@ -31,6 +32,7 @@ import static com.starry.wheregogateway.common.FilterPathCommon.*;
 public class GlobalAuthorizeFilter implements GlobalFilter, Ordered {
     @Autowired
     StringRedisTemplate redisTemplate;
+    private UserApplicationContext context = UserApplicationContext.getInstance();
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
@@ -65,6 +67,8 @@ public class GlobalAuthorizeFilter implements GlobalFilter, Ordered {
             response.setStatusCode(HttpStatus.UNAUTHORIZED);
             return response.setComplete();
         }
+        // 存储userID，用于后续的上下文操作
+        context.saveCurrentUser(auth[0]);
         return chain.filter(exchange);
     }
 

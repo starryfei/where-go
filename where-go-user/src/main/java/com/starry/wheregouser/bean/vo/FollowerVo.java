@@ -2,8 +2,8 @@ package com.starry.wheregouser.bean.vo;
 
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * ClassName: FollowerVo
@@ -15,8 +15,9 @@ import lombok.Setter;
 @Setter
 @Getter
 @Builder
+@ToString
 public class FollowerVo {
-    private String userId;
-    private String followerId;
-    private int status;
+    private String followerName;
+    private String followerImage;
+
 }

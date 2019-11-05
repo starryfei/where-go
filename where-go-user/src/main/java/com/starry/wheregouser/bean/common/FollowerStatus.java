@@ -1,5 +1,6 @@
 package com.starry.wheregouser.bean.common;
 
+import io.swagger.models.auth.In;
 import lombok.Getter;
 
 /**
@@ -15,18 +16,18 @@ public enum FollowerStatus {
     /**
      *
      */
-    LIKE("1", "点赞"),
+    LIKE(1, "关注"),
     /**
      *
      */
-    UNLIKE("0", "取消点赞/未点赞"),
+    UNLIKE(0, "取消关注"),
     ;
 
-    private String code;
+    private Integer code;
 
     private String msg;
 
-    FollowerStatus(String code, String msg) {
+    FollowerStatus(Integer code, String msg) {
         this.code = code;
         this.msg = msg;
     }

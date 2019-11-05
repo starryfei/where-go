@@ -2,7 +2,6 @@ package com.starry.wheregouser.bean.dto;
 
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
@@ -19,5 +18,6 @@ public class Follower {
     private int id;
     private String userId;
     private String followerId;
+    private String followerTime;
     private int status;
 }

@@ -39,7 +39,7 @@ public class WhereGoDataApplicationTests {
     }
     @Test
     public void getLimit(){
-        List<TravelContent> res = indexMapper.index(0,2);
+        List<TravelContent> res = indexMapper.index();
         res.forEach(r->log.info(r.toString()));
     }
     @Test

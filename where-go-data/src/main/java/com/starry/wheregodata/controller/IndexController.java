@@ -1,6 +1,7 @@
 package com.starry.wheregodata.controller;
 
 import com.starry.common.vo.CommonResult;
+import com.starry.context.UserApplicationContext;
 import com.starry.wheregodata.bean.dto.TravelContent;
 import com.starry.wheregodata.bean.vo.TravelVo;
 import com.starry.wheregodata.service.IndexService;
@@ -26,6 +27,7 @@ import java.util.UUID;
 public class IndexController {
     @Autowired
     IndexService indexService;
+    private UserApplicationContext context = UserApplicationContext.getInstance();
 
     @GetMapping("/index")
     public CommonResult getAllData(){
@@ -41,7 +43,7 @@ public class IndexController {
 
     @GetMapping("/delete")
     public CommonResult delete(@RequestParam("docId") String docId){
-        indexService.deleteData("",docId);
+        indexService.deleteData(context.getCurrentUser(),docId);
         return CommonResult.success();
     }
 
@@ -53,7 +55,7 @@ public class IndexController {
                 .title(title)
                 .content(content)
                 .image(image)
-                .userId("1")
+                .userId(context.getCurrentUser())
                 .userName("yafei")
                 .createDate("..................")
                 .label(label)
@@ -65,7 +67,7 @@ public class IndexController {
     }
     @GetMapping("/userData")
     public CommonResult getDataById(){
-        List<TravelVo> vos = indexService.getDataByUserId("");
+        List<TravelVo> vos = indexService.getDataByUserId(context.getCurrentUser());
         return CommonResult.success(vos);
     }
 
