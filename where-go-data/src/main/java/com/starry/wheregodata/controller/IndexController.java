@@ -55,7 +55,7 @@ public class IndexController {
                 .title(title)
                 .content(content)
                 .image(image)
-                .userId(context.getCurrentUser())
+                .userId("1")
                 .userName("yafei")
                 .createDate("..................")
                 .label(label)

@@ -1,8 +1,8 @@
 package com.starry.wheregouser.controller;
 
 import com.starry.common.vo.CommonResult;
+import com.starry.common.vo.user.FollowerVo;
 import com.starry.context.UserApplicationContext;
-import com.starry.wheregouser.bean.vo.FollowerVo;
 import com.starry.wheregouser.service.FollowerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -45,7 +45,7 @@ public class FollowerController {
     }
     @GetMapping("/followerList")
     public CommonResult followers(){
-        List<FollowerVo> followerVos = followerService.followers(context.getCurrentUser());
+        List<FollowerVo> followerVos = followerService.followers("1");
         return CommonResult.success(followerVos);
 
     }

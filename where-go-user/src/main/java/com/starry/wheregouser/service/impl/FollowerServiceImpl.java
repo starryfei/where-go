@@ -1,11 +1,10 @@
 package com.starry.wheregouser.service.impl;
 
-import com.starry.common.exception.CommonError;
 import com.starry.common.exception.CommonException;
+import com.starry.common.vo.user.FollowerVo;
 import com.starry.util.DateUtil;
 import com.starry.wheregouser.bean.common.FollowerStatus;
 import com.starry.wheregouser.bean.dto.Follower;
-import com.starry.wheregouser.bean.vo.FollowerVo;
 import com.starry.wheregouser.mapper.FollowerMapper;
 import com.starry.wheregouser.service.FollowerService;
 import org.springframework.beans.factory.annotation.Autowired;

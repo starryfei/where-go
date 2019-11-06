@@ -1,7 +1,6 @@
 package com.starry.wheregouser.service;
 
 import com.starry.wheregouser.bean.dto.Follower;
-import com.starry.wheregouser.bean.vo.FollowerVo;
 
 import java.util.List;
 

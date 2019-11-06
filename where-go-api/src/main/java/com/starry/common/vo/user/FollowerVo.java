@@ -1,9 +1,8 @@
-package com.starry.wheregouser.bean.vo;
+package com.starry.common.vo.user;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
+
+import java.io.Serializable;
 
 /**
  * ClassName: FollowerVo
@@ -14,9 +13,11 @@ import lombok.ToString;
  **/
 @Setter
 @Getter
-@Builder
 @ToString
-public class FollowerVo {
+@Builder
+//@NoArgsConstructor
+public class FollowerVo implements Serializable {
+    private String followerId;
     private String followerName;
     private String followerImage;
 

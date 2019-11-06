@@ -1,10 +1,8 @@
 package com.starry.wheregouser.mapper;
 
+import com.starry.common.vo.user.FollowerVo;
 import com.starry.wheregouser.bean.dto.Follower;
-import com.starry.wheregouser.bean.vo.FollowerVo;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -35,7 +33,13 @@ public interface FollowerMapper {
     /**
      * 关注的人
      */
-    @Select("select user.user_name,user.user_icon from user,flow " +
+    @Select("select flow.flower_id, user.user_name,user.user_icon from user,flow " +
             "where flow.user_id =#{userId} and flow.flower_id=user.id")
+    @Results(id="follower",value = {
+            @Result(column="flower_id",property = "followerId"),
+            @Result(column = "user_name",property = "followerName"),
+            @Result(column = "user_icon",property = "followerImage")
+
+    })
     List<FollowerVo> followers(String userId);
 }

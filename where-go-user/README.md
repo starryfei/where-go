@@ -2,6 +2,7 @@
 - where-go 用户服务，获取用户信息，登陆，注册等服务
 
 - 登陆方式初步使用redis 存储token，client请求在请求头中加入"authStr"字段， 可以判断是否登陆进去
+
 - todo
     使用JWTtoken方式登陆
 
@@ -20,3 +21,5 @@ UserService userService;
  LoginInterceptor loginInterceptor;
 registry.addInterceptor(loginInterceptor).addPathPatterns("/*/**");
 ```
+
+

@@ -2,8 +2,6 @@ package com.starry.wheregouser.service.impl;
 
 import com.starry.wheregouser.bean.common.FollowerStatus;
 import com.starry.wheregouser.bean.dto.Follower;
-import com.starry.wheregouser.bean.vo.FollowerVo;
-import com.starry.wheregouser.bean.vo.UserVo;
 import com.starry.wheregouser.service.FollowerRedisService;
 import com.starry.wheregouser.util.RedisKeyUtils;
 import lombok.extern.slf4j.Slf4j;

@@ -1,6 +1,9 @@
 package com.starry.common.vo;
 
+import lombok.NoArgsConstructor;
 import org.springframework.validation.BindingResult;
+
+import java.io.Serializable;
 
 /**
  * ClassName: CommonResult
@@ -9,7 +12,8 @@ import org.springframework.validation.BindingResult;
  * @author: starryfei
  * @date: 2019-03-29 11:14
  **/
-public class CommonResult {
+@NoArgsConstructor
+public class CommonResult implements Serializable {
     //操作成功
     public static final int SUCCESS = 200;
     //操作失败

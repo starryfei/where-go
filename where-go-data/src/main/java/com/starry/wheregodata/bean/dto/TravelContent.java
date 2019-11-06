@@ -2,6 +2,7 @@ package com.starry.wheregodata.bean.dto;
 
 import lombok.*;
 
+import java.io.Serializable;
 import java.sql.Date;
 
 /**
@@ -15,7 +16,7 @@ import java.sql.Date;
 @Getter
 @Builder
 @ToString
-public class TravelContent {
+public class TravelContent implements Serializable {
     private int id;
     private String docId;
     private String title;

@@ -1,12 +1,9 @@
 package com.starry.wheregouser.service.impl;
 
+import com.starry.common.vo.user.FollowerVo;
 import com.starry.wheregouser.bean.dto.Follower;
-import com.starry.wheregouser.bean.vo.FollowerVo;
 import com.starry.wheregouser.mapper.FollowerMapper;
-import com.starry.wheregouser.service.FollowerRedisService;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

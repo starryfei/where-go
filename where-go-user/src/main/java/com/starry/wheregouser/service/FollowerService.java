@@ -1,9 +1,6 @@
 package com.starry.wheregouser.service;
 
-import com.starry.wheregouser.bean.dto.Follower;
-import com.starry.wheregouser.bean.vo.FollowerVo;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import com.starry.common.vo.user.FollowerVo;
 
 import java.util.List;
 

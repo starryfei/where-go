@@ -1,17 +1,23 @@
 package com.starry.wheregodata.service.impl;
 
+import com.alibaba.fastjson.JSON;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.starry.common.vo.user.FollowerVo;
 import com.starry.wheregodata.bean.dto.TravelContent;
 import com.starry.wheregodata.bean.vo.TravelVo;
 import com.starry.wheregodata.mapper.IndexMapper;
 import com.starry.wheregodata.service.IndexService;
+import com.starry.wheregodata.service.ShareExperienceService;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -27,6 +33,11 @@ public class IndexServiceImpl implements IndexService {
     @Autowired
     IndexMapper indexMapper;
 
+    @Autowired
+    ShareExperienceService shareExperienceService;
+    @Autowired
+    StringRedisTemplate stringRedisTemplate;
+
     @Override
     public List<TravelVo> index(int pageIndex, int pageSize) {
         PageHelper.startPage(pageIndex, pageSize);
@@ -37,14 +48,29 @@ public class IndexServiceImpl implements IndexService {
 
     @Override
     public List<TravelVo> allData() {
+
         List<TravelContent> results = indexMapper.allData();
+
         return converToVo(results);
     }
 
 
     @Override
     public void insertData(TravelContent content) {
+        // 存储到数据库中
         indexMapper.insertData(content);
+        // 放到redis中，用于用户登陆进行文章推送
+        String followerVos = shareExperienceService.getFollowerList();
+        log.info(followerVos);
+//        followerVos.forEach(followerVo -> {
+//            log.info(followerVo.getClass().getName());
+//
+//
+////            String userKey = followerVo.getFollowerId()+"::"+followerVo.getFollowerName();
+////            String value = JSON.toJSONString(content);
+////            stringRedisTemplate.opsForZSet().add(userKey,value, System.currentTimeMillis());
+//        });
+
     }
 
     @Override
