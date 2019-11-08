@@ -55,7 +55,7 @@ public class IndexController {
                 .title(title)
                 .content(content)
                 .image(image)
-                .userId("1")
+                .userId("3")
                 .userName("yafei")
                 .createDate("..................")
                 .label(label)

@@ -21,6 +21,6 @@ public class ShareExpreienceServiceImpl implements ShareExperienceService {
     @Override
     public String getFollowerList() {
         log.info("获取服务失败");
-        return "serivice failure";
+        return "error serivice failure";
     }
 }

@@ -48,7 +48,7 @@ public class FollowerMapperTest {
     }
     @Test
     public void getAllFollowersD(){
-        List<FollowerVo> count = followerMapper.followers("1");
+        List<FollowerVo> count = followerMapper.followers("3");
         count.forEach(f ->log.info(f.toString()));
     }
 }
