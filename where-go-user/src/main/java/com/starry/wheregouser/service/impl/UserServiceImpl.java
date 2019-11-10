@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
+import org.springframework.util.DigestUtils;
 
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
@@ -35,7 +36,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserVo login(String name, String pwd) {
-        User user = userMapper.login(name,pwd);
+        String md5Password = DigestUtils.md5DigestAsHex(pwd.getBytes());
+        log.info(pwd,md5Password);
+        User user = userMapper.login(name,md5Password);
         if (user != null) {
             String token = generatorToken(user);
             log.info(user.getUserName(),token);
@@ -68,15 +71,25 @@ public class UserServiceImpl implements UserService {
         if (res != null) {
             return UserVo.builder().code("100").result(res.getUserName()+" has already register").build();
         } else {
-            userMapper.saveUser(user.getUserName(),user.getPwd(),user.getEmail(),user.getTelphone(),user.getIcon());
+            String md5Password = DigestUtils.md5DigestAsHex(user.getPwd().getBytes());
+            log.info(user.getPwd(), md5Password);
+            userMapper.saveUser(user.getUserName(),md5Password,user.getEmail(),user.getTelphone(),user.getIcon());
             String token = generatorToken(user);
             return UserVo.builder().code("200").result("register success").token(token).build();
         }
     }
+
+    /**
+     * token = userName::userId::uuid
+     * @param user
+     * @return
+     */
     private String generatorToken(User user){
-        String token = UUID.randomUUID().toString().replace("-","");
+        String uid = UUID.randomUUID().toString().replace("-","");
+        String token = user.getUserName()+"::"+user.getId()+"::"+uid;
         redisTemplate.opsForValue().set(user.getUserName(),user.getUserName()+":"+token,24*60*60, TimeUnit.SECONDS);
         log.info(user.getUserName(),token);
-        return user.getUserName()+":"+token;
+
+        return token;
     }
 }

@@ -20,5 +20,10 @@ class WhereGoUserApplicationTests {
         User user = userMapper.selectUserByName("yafei");
         log.info(user.getUserName());
     }
+    @Test
+    public void reegister(){
+        User user = userMapper.selectUserByName("yafei");
+        log.info(user.getUserName());
+    }
 
 }

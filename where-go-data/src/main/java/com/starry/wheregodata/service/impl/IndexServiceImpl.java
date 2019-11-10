@@ -77,16 +77,6 @@ public class IndexServiceImpl implements IndexService {
                 stringRedisTemplate.opsForZSet().add(userKey,value, System.currentTimeMillis());
 
             }
-//            JsonObject result = JSON.parseObject(followerVos,JsonObject.class);
-//            log.info(result.toString());
-//            List<Object> followerVoList = (List<Object>) c.getData();
-//            followerVoList.forEach(followerVo -> {
-//                log.info(followerVo.getClass().getName());
-//
-//                String userKey = followerVo.getFollowerId()+"::"+followerVo.getFollowerName();
-//                String value = JSON.toJSONString(content);
-//                stringRedisTemplate.opsForZSet().add(userKey,value, System.currentTimeMillis());
-//            });
 
         }
 
